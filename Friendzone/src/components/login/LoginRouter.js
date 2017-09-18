@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import Login from './Login';
 import Help from '../help/Help';
 import CreateAccount from '../create_account/CreateAccount';
-import { Tabs } from '../../components/main/MainRouter';
+import { SideMenu } from '../../components/main/MainRouter';
 import CommonStyle from '../../content/styles/CommonStyle';
 import Color from '../../content/color/Color';
 import { Languages } from '../../content/languages/Languages';
@@ -45,7 +45,7 @@ const LoginStack = StackNavigator({
         })
     },
     Home: {
-        screen: Tabs,
+        screen: SideMenu,
         navigationOptions: () => ({
             headerStyle: {
                 display: 'none'

@@ -32,7 +32,7 @@ export const Tabs = TabNavigator({
         navigationOptions: () => ({
             tabBarIcon: ({ tintColor }) => (
                 <MaterialIcons
-                    name="person-outline"
+                    name="group"
                     size={fontScale(24)}
                     style={{ color: tintColor }}
                 />
@@ -56,7 +56,7 @@ export const Tabs = TabNavigator({
         navigationOptions: () => ({
             tabBarIcon: ({ tintColor }) => (
                 <MaterialIcons
-                    name="chat-bubble-outline"
+                    name="forum"
                     size={fontScale(24)}
                     style={{ color: tintColor }}
                 />
@@ -68,7 +68,7 @@ export const Tabs = TabNavigator({
         navigationOptions: () => ({
             tabBarIcon: ({ tintColor }) => (
                 <MaterialIcons
-                    name="notifications-none"
+                    name="public"
                     size={fontScale(24)}
                     style={{ color: tintColor }}
                 />
