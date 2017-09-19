@@ -31,14 +31,6 @@ class Home extends Component {
                 <TouchableOpacity onPress={() => navigate('DrawerOpen')}>
                     <Text>Open Drawer</Text>
                 </TouchableOpacity>
-                <TouchableOpacity
-                    onPress={() => {
-                        setLanguage('en');
-                        this.props.dispatch({ type: 'SET_ENGLISH_LANGUAGE' });
-                    }}
-                >
-                    <Text>Set Language</Text>
-                </TouchableOpacity>
                 <Text> {Languages.hello}</Text>
                 <Text>
                     Home

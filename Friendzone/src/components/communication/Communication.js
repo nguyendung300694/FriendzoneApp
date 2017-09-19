@@ -172,7 +172,8 @@ class Communication extends Component {
                                 backgroundColor: 'white',
                                 flex: 1,
                                 fontSize: 14,
-                                borderRadius: 20
+                                borderRadius: 20,
+                                paddingHorizontal: 15
                             }}
                             multiline
                             underlineColorAndroid='transparent'
@@ -208,7 +209,8 @@ class Communication extends Component {
                                 fontSize: 14,
                                 borderColor: gray4,
                                 borderRadius: 20,
-                                borderWidth: 1.3
+                                borderWidth: 1.3,
+                                paddingHorizontal: 15
                             }}
                             onChangeText={(comment) => {
                                 this.setState({ comment });
