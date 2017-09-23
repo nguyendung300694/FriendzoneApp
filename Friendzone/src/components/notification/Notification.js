@@ -20,10 +20,10 @@ const Item =
             <Image source={Image1} style={{ width: 36, height: 36, borderRadius: 18 }} />
         </View>
         <View style={{ flex: 4, justifyContent: 'center' }} >
-            <Text style={{ fontSize: 13 }}>
+            <Text numberOfLines={1} ellipsizeMode={'tail'} style={{ fontSize: 13 }}>
                 Dung nguyen has new post....
             </Text>
-            <Text style={{ fontSize: 10 }}>20:08</Text>
+            <Text numberOfLines={1} ellipsizeMode={'tail'} style={{ fontSize: 10 }}>20:08</Text>
         </View>
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
             <Image source={Image3} style={{ width: 36, height: 36, borderRadius: 18 }} />
