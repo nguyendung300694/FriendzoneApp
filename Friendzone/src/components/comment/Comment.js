@@ -26,6 +26,7 @@ class Comment extends Component {
     }
     render() {
         const { lang } = this.props;
+        const { navigate } = this.props.navigation;
         const Item = (
             <View
                 comment item
@@ -41,14 +42,30 @@ class Comment extends Component {
                     <Image source={Avatar} style={{ width: 30, height: 30, borderRadius: 15 }} />
                 </View>
                 <View style={{ flex: 9, justifyContent: 'center', paddingHorizontal: 5 }} >
-                    <Text
-                        style={{
-                            fontSize: 13,
-                            fontWeight: 'bold'
-                        }}
-                    >
-                        Dung Nguyen
-                    </Text>
+                    <View style={{ flex: 1, flexDirection: 'row' }}>
+                        <Text
+                            style={{
+                                fontSize: 13,
+                                fontWeight: 'bold',
+                                flex: 9
+                            }}
+                        >
+                            Dung Nguyen
+                        </Text>
+                        <TouchableOpacity
+                            style={{
+                                flex: 1,
+                                justifyContent: 'center',
+                                alignItems: 'flex-end'
+                            }}
+                        >
+                            <MaterialIcons
+                                name={'more-horiz'}
+                                size={12}
+                                color={gray4}
+                            />
+                        </TouchableOpacity>
+                    </View>
                     <Text
                         style={{
                             fontSize: 13
@@ -83,7 +100,9 @@ class Comment extends Component {
                         </Text>
                         </TouchableOpacity>
                         <Text style={{ fontSize: 10, justifyContent: 'center', alignItems: 'center', paddingHorizontal: 5 }}>-</Text>
-                        <TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={() => navigate('Reply')}
+                        >
                             <Text
                                 style={{
                                     fontSize: 11
@@ -112,16 +131,33 @@ class Comment extends Component {
                     <Image source={Avatar} style={{ width: 30, height: 30, borderRadius: 15 }} />
                 </View>
                 <View style={{ flex: 9, justifyContent: 'center', paddingHorizontal: 5 }} >
-                    <Text
-                        style={{
-                            fontSize: 13,
-                            fontWeight: 'bold',
-                            height: 30,
-                            textAlignVertical: 'center'
-                        }}
-                    >
-                        Dung Nguyen
-                    </Text>
+                    <View style={{ height: 30, flex: 1, flexDirection: 'row', justifyContent: 'center' }}>
+                        <Text
+                            numberOfLines={1}
+                            ellipsizeMode={'tail'}
+                            style={{
+                                fontSize: 13,
+                                fontWeight: 'bold',
+                                textAlignVertical: 'center',
+                                flex: 9
+                            }}
+                        >
+                            Dung Nguyen
+                        </Text>
+                        <TouchableOpacity
+                            style={{
+                                flex: 1,
+                                justifyContent: 'center',
+                                alignItems: 'flex-end'
+                            }}
+                        >
+                            <MaterialIcons
+                                name={'more-horiz'}
+                                size={12}
+                                color={gray4}
+                            />
+                        </TouchableOpacity>
+                    </View>
                     <Image style={{ height: width / 3, width: width / 3, marginTop: 5 }} source={Avatar} />
                     <View style={{ flexDirection: 'row', paddingVertical: 12 }}>
                         <Text
@@ -150,7 +186,9 @@ class Comment extends Component {
                         </Text>
                         </TouchableOpacity>
                         <Text style={{ fontSize: 10, justifyContent: 'center', alignItems: 'center', paddingHorizontal: 5 }}>-</Text>
-                        <TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={() => navigate('Reply')}
+                        >
                             <Text
                                 style={{
                                     fontSize: 11
@@ -161,7 +199,7 @@ class Comment extends Component {
                         </TouchableOpacity>
                     </View>
                 </View>
-            </View>
+            </View >
         );
         const btnSendText = (<TouchableOpacity style={{}}>
             <MaterialIcons
@@ -182,10 +220,10 @@ class Comment extends Component {
         return (
             <View style={{ flex: 1 }}>
                 <Text style={{ display: 'none' }}>{lang}</Text>
-                <StatusBar backgroundColor={'wheat'} />
+                {/* <StatusBar backgroundColor={'wheat'} /> */}
                 <View
                     style={{
-                        backgroundColor: 'wheat',
+                        backgroundColor: black,
                         position: 'absolute',
                         height: 50,
                         alignSelf: 'stretch',

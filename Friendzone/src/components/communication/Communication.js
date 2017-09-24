@@ -9,7 +9,7 @@ import Image1 from '../../content/images/LoginBackGround1.png';
 import Image2 from '../../content/images/LoginBackGround2.jpg';
 import Image3 from '../../content/images/LoginBackGround3.jpg';
 
-const { gray2, gray4, white, blue5 } = Color;
+const { gray2, gray4, white, blue5, gray8 } = Color;
 const MyItem =
     (<View
         style={{
@@ -100,12 +100,15 @@ class Communication extends Component {
             comment: '',
             line: 0,
             maxHeight: 0,
-            commentHeight: 0
+            commentHeight: 0,
+            isSendText: false
         });
     }
 
     render() {
         const { lang } = this.props;
+        const { isSendText } = this.state;
+        const btnSendColor = isSendText ? blue5 : gray8;
         return (
             <View style={{ flex: 1 }}>
                 <Text style={{ display: 'none' }}>
@@ -155,7 +158,6 @@ class Communication extends Component {
                             <MaterialIcons
                                 name={'attach-file'}
                                 size={24}
-                                color={blue5}
                                 style={{ transform: [{ rotate: '45deg' }] }}
                             />
                         </TouchableOpacity>
@@ -173,7 +175,8 @@ class Communication extends Component {
                                 flex: 1,
                                 fontSize: 14,
                                 borderRadius: 20,
-                                paddingHorizontal: 15
+                                paddingHorizontal: 15,
+                                color: 'transparent'
                             }}
                             multiline
                             underlineColorAndroid='transparent'
@@ -214,6 +217,11 @@ class Communication extends Component {
                             }}
                             onChangeText={(comment) => {
                                 this.setState({ comment });
+                                if (comment.length) {
+                                    this.setState({ isSendText: true });
+                                } else {
+                                    this.setState({ isSendText: false });
+                                }
                             }}
                             underlineColorAndroid='transparent'
                             multiline
@@ -239,7 +247,7 @@ class Communication extends Component {
                             <MaterialIcons
                                 name={'send'}
                                 size={24}
-                                color={blue5}
+                                color={btnSendColor}
                             />
                         </TouchableOpacity>
                     </View>

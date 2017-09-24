@@ -8,6 +8,7 @@ import Notification from '../notification/Notification';
 import Friend from '../friend/Friend';
 import Communication from '../communication/Communication';
 import Camera from '../camera/Camera';
+import CommentRouter from '../comment/CommentRouter';
 import Menu from './Menu';
 import Color from '../../content/color/Color';
 import { horizontalScale, fontScale } from '../../utillities/Scale';
@@ -79,7 +80,7 @@ export const Tabs = TabNavigator({
     {
         swipeEnabled: true,
         tabBarPosition: 'bottom',
-        initialRouteName: 'CommunicationTab',
+        initialRouteName: 'HomeTab',
         animationEnabled: true,
         tabBarOptions: {
             showLabel: false,
@@ -98,6 +99,9 @@ export const Tabs = TabNavigator({
 export const SideMenu = DrawerNavigator({
     Tabbar: {
         screen: Tabs
+    },
+    CommentRouter: {
+        screen: CommentRouter
     }
 }, {
         drawerPosition: 'left',

@@ -8,14 +8,14 @@ import { Provider } from 'react-redux';
 import Store from './src/redux/store/Store';
 import LoginRouter from './src/components/login/LoginRouter';
 import Main from './src/components/main/Main';
-import Comment from './src/components/comment/Comment';
-import Friend from './src/components/friend/Friend';
+import Home from './src/components/home/Home';
+import Reply from './src/components/reply/Reply';
 
 export default class Friendzone extends Component {
   render() {
     return (
       <Provider store={Store}>
-        <Comment />
+        <LoginRouter />
       </Provider>
     );
   }

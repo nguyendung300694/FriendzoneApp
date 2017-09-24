@@ -27,7 +27,6 @@ class Profile extends Component {
                 //container item
                 style={{
                     flex: 1,
-                    marginTop: 15,
                     paddingTop: 10,
                     margin: 5,
                     backgroundColor: white,
@@ -79,7 +78,8 @@ class Profile extends Component {
                     //status
                     style={{
                         marginHorizontal: 15,
-                        paddingVertical: 5
+                        paddingVertical: 5,
+                        fontSize: 13
                     }}
                     numberOfLines={6}
                     ellipsizeMode={'tail'}
