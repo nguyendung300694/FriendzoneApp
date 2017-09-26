@@ -311,7 +311,7 @@ class Comment extends Component {
                             <TextInput
                                 style={{
                                     flex: 1,
-                                    fontSize: 14,
+                                    fontSize: 13,
                                     color: 'transparent'
                                 }}
                                 multiline
@@ -339,7 +339,7 @@ class Comment extends Component {
                             <TextInput
                                 style={{
                                     flex: 1,
-                                    fontSize: 14,
+                                    fontSize: 13,
                                     position: 'absolute',
                                     alignSelf: 'stretch',
                                     right: 0,

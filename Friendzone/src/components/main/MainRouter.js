@@ -7,13 +7,14 @@ import Home from '../home/Home';
 import Notification from '../notification/Notification';
 import Friend from '../friend/Friend';
 import Communication from '../communication/Communication';
+import CommunicationRouter from '../communication/CommunicationRouter';
 import Camera from '../camera/Camera';
 import CommentRouter from '../comment/CommentRouter';
 import Menu from './Menu';
 import Color from '../../content/color/Color';
 import { horizontalScale, fontScale } from '../../utillities/Scale';
 
-const { blue5, white, gray8 } = Color;
+const { blue5, white, gray8, gray4 } = Color;
 
 export const Tabs = TabNavigator({
     HomeTab: {
@@ -78,10 +79,10 @@ export const Tabs = TabNavigator({
     }
 },
     {
-        swipeEnabled: true,
+        swipeEnabled: false,
         tabBarPosition: 'bottom',
         initialRouteName: 'HomeTab',
-        animationEnabled: true,
+        animationEnabled: false,
         tabBarOptions: {
             showLabel: false,
             showIcon: true,
@@ -91,7 +92,9 @@ export const Tabs = TabNavigator({
             activeTintColor: blue5,
             inactiveTintColor: gray8,
             style: {
-                backgroundColor: white
+                backgroundColor: white,
+                borderTopColor: gray8,
+                borderTopWidth: 0.3
             }
         }
     });
@@ -102,6 +105,9 @@ export const SideMenu = DrawerNavigator({
     },
     CommentRouter: {
         screen: CommentRouter
+    },
+    CommunicationRouter: {
+        screen: CommunicationRouter
     }
 }, {
         drawerPosition: 'left',

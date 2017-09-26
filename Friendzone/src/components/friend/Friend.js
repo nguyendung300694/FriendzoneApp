@@ -48,14 +48,14 @@ class Friend extends Component {
                     {lang}
                 </Text>
                 <View style={{ flex: 1, backgroundColor: gray2, flexDirection: 'row', justifyContent: 'center' }}>
-                    <View style={{ flex: 9, justifyContent: 'center' }}>
+                    <View style={{ flex: 9, paddingVertical: 10, paddingLeft: 10, justifyContent: 'center' }}>
                         <View
                             style={{
-                                backgroundColor: 'white',
-                                marginVertical: 10,
-                                marginLeft: 10,
+                                backgroundColor: white,
                                 flexDirection: 'row',
-                                borderRadius: 10
+                                borderRadius: 10,
+                                borderColor: gray2,
+                                borderWidth: 1
                             }}
                         >
                             <MaterialIcons
@@ -65,6 +65,9 @@ class Friend extends Component {
                             />
                             <TextInput
                                 style={{
+                                    fontSize: 13,
+                                    paddingVertical: 0,
+                                    marginVertical: 0,
                                     flex: 1
                                 }}
                                 onChangeText={(name) => {

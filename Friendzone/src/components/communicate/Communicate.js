@@ -9,7 +9,7 @@ import Image1 from '../../content/images/LoginBackGround1.png';
 import Image2 from '../../content/images/LoginBackGround2.jpg';
 import Image3 from '../../content/images/LoginBackGround3.jpg';
 
-const { gray2, gray4, white, blue5, gray8 } = Color;
+const { gray2, gray4, white, blue5, gray8, black } = Color;
 const MyItem =
     (<View
         style={{
@@ -128,13 +128,12 @@ class Communicate extends Component {
                         (event) => this.setState({ commentHeight: event.nativeEvent.layout.height })
                     }
                     style={{
-                        backgroundColor: gray2,
+                        backgroundColor: white,
                         flexDirection: 'row',
                         bottom: 0,
                         left: 0,
                         right: 0,
                         position: 'absolute',
-                        paddingVertical: 10,
                         paddingHorizontal: 3,
                         borderTopColor: gray4,
                         borderTopWidth: 1.1
@@ -164,18 +163,15 @@ class Communicate extends Component {
                     </View>
                     <View
                         style={{
-                            flex: 5.5,
-                            alignContent: 'stretch'
+                            flex: 6,
+                            alignContent: 'stretch',
                         }}
                     >
                         <TextInput
                             style={{
                                 alignSelf: 'stretch',
-                                backgroundColor: 'white',
                                 flex: 1,
-                                fontSize: 14,
-                                borderRadius: 20,
-                                paddingHorizontal: 15,
+                                fontSize: 13,
                                 color: 'transparent'
                             }}
                             multiline
@@ -203,18 +199,14 @@ class Communicate extends Component {
                         <TextInput
                             style={{
                                 alignSelf: 'stretch',
-                                backgroundColor: 'white',
                                 position: 'absolute',
                                 right: 0,
                                 left: 0,
                                 bottom: 0,
                                 top: 0,
-                                fontSize: 14,
-                                borderColor: gray4,
-                                borderRadius: 20,
-                                borderWidth: 1.3,
-                                paddingHorizontal: 15
+                                fontSize: 13,
                             }}
+                            selectionColor={black}
                             onChangeText={(comment) => {
                                 this.setState({ comment });
                                 if (comment.length) {

@@ -21,7 +21,7 @@ const Item =
         </View>
         <View style={{ flex: 4, justifyContent: 'center' }} >
             <Text numberOfLines={1} ellipsizeMode={'tail'} style={{ fontSize: 13 }}>
-                Dung nguyen has new post....
+                Dung nguyen has new post
             </Text>
             <Text numberOfLines={1} ellipsizeMode={'tail'} style={{ fontSize: 10 }}>20:08</Text>
         </View>
@@ -33,7 +33,6 @@ const Item =
 class Notification extends Component {
     render() {
         const { lang } = this.props;
-
         return (
             <View>
                 <Text style={{ display: 'none' }}>
